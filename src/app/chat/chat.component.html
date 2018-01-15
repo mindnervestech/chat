@@ -1,0 +1,376 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>   
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div fxLayout="row" fxLayoutAlign="left start">
+  <div fxFlex.gt-mat="100" fxFlex.gt-sm="100" fxFlex="100">
+    <mat-card class="mat-card-top">
+      <mat-sidenav-container style="background: #fff;">
+       
+        <mat-toolbar class="chat-toolbar">
+          <div fxLayout="row" fxFlex="100" fxLayoutAlign="center center">
+            <!-- <button (click)="chatnav.toggle()" class="mr-1" md-icon-button>
+              <md-icon>short_text</mat-icon>
+            </button> -->
+            <div fxFlex="30" class="sport">
+                <a href="#">Sports</a>
+            </div> 
+            <div fxFlex="70" class="team">
+              <!-- <h5 class="ma-0">{{selectedMessage.from}}</h5>
+              <h6 class="ma-0 mat-text-muted">Online</h6> -->
+              <a href="#">Teams</a>
+            </div>
+            <input type="text" placeholder="Search...">
+          </div>
+        </mat-toolbar>
+        <hr>
+        <mat-card-content fxFlex="100">
+          <div fxFlex="30">
+              <mat-nav-list class="nav-list-box">
+                  <mat-list-item >
+                    <div class="left-box" id="current" (click)="switchfun($event)">
+                      <img src="assets/images/nfl.png">
+                      <div class="box-1"><span class="box1">NFL</span><br/>2016</div>
+                      <div class="team-member">30 TEAMS</div>
+                    </div>
+                  </mat-list-item>
+                  <div style="clear:both;"></div>
+                  <mat-list-item class="nav-list-box">  
+                    <div class="left-box" id="current1" (click)="switchfun($event)">
+                        <img src="assets/images/nba (1).png">
+                        <div class="box-1"><span class="box1">NBA</span><br/>2016-2017</div>
+                        <div class="team-member">30 TEAMS</div>
+                    </div>
+                  </mat-list-item>  
+                  <mat-list-item class="nav-list-box">  
+                      <div class="left-box active" id="current2" (click)="switchfun($event)">
+                          <img src="assets/images/nba (3).png">
+                          <div class="box-1"><span class="box1">MLB</span><br/>2016</div>
+                          <div class="team-member">30 TEAMS</div>
+                      </div>
+                    </mat-list-item>    
+                    <mat-list-item class="nav-list-box">  
+                        <div class="left-box" id="current3" (click)="switchfun($event)">
+                            <img src="assets/images/nba (2).png">
+                            <div class="box-1"><span class="box1">NHL</span><br/>2016-2017</div>
+                            <div class="team-member">30 TEAMS</div>
+                        </div>
+                      </mat-list-item>    
+                      <mat-list-item class="nav-list-box">  
+                          <div class="left-box" id="current4" (click)="switchfun($event)">
+                              <img src="assets/images/nba (4).png">
+                              <div class="box-1"><span class="box1">MLS</span><br/>2016</div>
+                              <div class="team-member">30 TEAMS</div>
+                          </div>
+                        </mat-list-item>        
+                  
+                </mat-nav-list>
+          </div>
+          <div fxFlex="70" class="full-content">
+            <div class="main-content" [hidden]="current">
+              <div class="content">
+                <div class="cont-img">
+                  <img src="assets/images/face7.jpg">
+                </div>
+                <div class="cont">
+                  <span class="a1">Atlanta,</span><span class="a2">Braves</span>
+                </div>
+              </div>
+              <div class="content">
+                <div class="cont-img">
+                  <img src="assets/images/face7.jpg">
+                </div>
+                <div class="cont">
+                  <span class="a1">New York,</span><span class="a2">Yankees</span>
+                </div>
+              </div>
+              <div class="content">
+                <div class="cont-img">
+                  <img src="assets/images/face7.jpg">
+                </div>
+                <div class="cont">
+                  <span class="a1">Milwaukee,</span><span class="a2">Brewers</span>
+                </div>
+              </div>
+              <div class="content">
+                <div class="cont-img">
+                  <img src="assets/images/face7.jpg">
+                </div>
+                <div class="cont">
+                  <span class="a1">Chicago,</span><span class="a2">Cubs</span>
+                </div>
+              </div>
+              <div class="content">
+                <div class="cont-img">
+                  <img src="assets/images/face7.jpg">
+                </div>
+                <div class="cont">
+                  <span class="a1">Boston,</span><span class="a2">Red Sox</span>
+                </div>
+              </div>
+              
+            </div>  
+
+            <!-- <div class="main-content" [hidden]="current1">
+                <div class="content">
+                  <div class="cont-img">
+                    <img src="assets/images/face7.jpg">
+                  </div>
+                  <div class="cont">
+                    <span class="a1">Atlanta,</span><span class="a2">Braves</span>
+                  </div>
+                </div>
+                <div class="content">
+                  <div class="cont-img">
+                    <img src="assets/images/face7.jpg">
+                  </div>
+                  <div class="cont">
+                    <span class="a1">New York,</span><span class="a2">Yankees</span>
+                  </div>
+                </div>
+                <div class="content">
+                  <div class="cont-img">
+                    <img src="assets/images/face7.jpg">
+                  </div>
+                  <div class="cont">
+                    <span class="a1">Milwaukee,</span><span class="a2">Brewers</span>
+                  </div>
+                </div>
+                <div class="content">
+                  <div class="cont-img">
+                    <img src="assets/images/face7.jpg">
+                  </div>
+                  <div class="cont">
+                    <span class="a1">Chicago,</span><span class="a2">Cubs</span>
+                  </div>
+                </div>
+                <div class="content">
+                  <div class="cont-img">
+                    <img src="assets/images/face7.jpg">
+                  </div>
+                  <div class="cont">
+                    <span class="a1">Boston,</span><span class="a2">Red Sox</span>
+                  </div>
+                </div>
+                <div class="content">
+                  <div class="cont-img">
+                    <img src="assets/images/face7.jpg">
+                  </div>
+                  <div class="cont">
+                    <span class="a1">Boston,</span><span class="a2">Red Sox</span>
+                  </div>
+                </div>
+              </div>  
+
+              <div class="main-content" [hidden]="current2">
+                  <div class="content">
+                    <div class="cont-img">
+                      <img src="assets/images/face7.jpg">
+                    </div>
+                    <div class="cont">
+                      <span class="a1">Atlanta,</span><span class="a2">Braves</span>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="cont-img">
+                      <img src="assets/images/face7.jpg">
+                    </div>
+                    <div class="cont">
+                      <span class="a1">New York,</span><span class="a2">Yankees</span>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="cont-img">
+                      <img src="assets/images/face7.jpg">
+                    </div>
+                    <div class="cont">
+                      <span class="a1">Milwaukee,</span><span class="a2">Brewers</span>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="cont-img">
+                      <img src="assets/images/face7.jpg">
+                    </div>
+                    <div class="cont">
+                      <span class="a1">Chicago,</span><span class="a2">Cubs</span>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="cont-img">
+                      <img src="assets/images/face7.jpg">
+                    </div>
+                    <div class="cont">
+                      <span class="a1">Boston,</span><span class="a2">Red Sox</span>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="cont-img">
+                      <img src="assets/images/face7.jpg">
+                    </div>
+                    <div class="cont">
+                      <span class="a1">Boston,</span><span class="a2">Red Sox</span>
+                    </div>
+                  </div>
+                </div>  
+
+                <div class="main-content" [hidden]="current3">
+                    <div class="content">
+                      <div class="cont-img">
+                        <img src="assets/images/face7.jpg">
+                      </div>
+                      <div class="cont">
+                        <span class="a1">Atlanta,</span><span class="a2">Braves</span>
+                      </div>
+                    </div>
+                    <div class="content">
+                      <div class="cont-img">
+                        <img src="assets/images/face7.jpg">
+                      </div>
+                      <div class="cont">
+                        <span class="a1">New York,</span><span class="a2">Yankees</span>
+                      </div>
+                    </div>
+                    <div class="content">
+                      <div class="cont-img">
+                        <img src="assets/images/face7.jpg">
+                      </div>
+                      <div class="cont">
+                        <span class="a1">Milwaukee,</span><span class="a2">Brewers</span>
+                      </div>
+                    </div>
+                    <div class="content">
+                      <div class="cont-img">
+                        <img src="assets/images/face7.jpg">
+                      </div>
+                      <div class="cont">
+                        <span class="a1">Chicago,</span><span class="a2">Cubs</span>
+                      </div>
+                    </div>
+                    <div class="content">
+                      <div class="cont-img">
+                        <img src="assets/images/face7.jpg">
+                      </div>
+                      <div class="cont">
+                        <span class="a1">Boston,</span><span class="a2">Red Sox</span>
+                      </div>
+                    </div>
+                    <div class="content">
+                      <div class="cont-img">
+                        <img src="assets/images/face7.jpg">
+                      </div>
+                      <div class="cont">
+                        <span class="a1">Boston,</span><span class="a2">Red Sox</span>
+                      </div>
+                    </div>
+                  </div>  
+
+                  <div class="main-content" [hidden]="current4">
+                      <div class="content">
+                        <div class="cont-img">
+                          <img src="assets/images/face7.jpg">
+                        </div>
+                        <div class="cont">
+                          <span class="a1">Atlanta,</span><span class="a2">Braves</span>
+                        </div>
+                      </div>
+                      <div class="content">
+                        <div class="cont-img">
+                          <img src="assets/images/face7.jpg">
+                        </div>
+                        <div class="cont">
+                          <span class="a1">New York,</span><span class="a2">Yankees</span>
+                        </div>
+                      </div>
+                      <div class="content">
+                        <div class="cont-img">
+                          <img src="assets/images/face7.jpg">
+                        </div>
+                        <div class="cont">
+                          <span class="a1">Milwaukee,</span><span class="a2">Brewers</span>
+                        </div>
+                      </div>
+                      <div class="content">
+                        <div class="cont-img">
+                          <img src="assets/images/face7.jpg">
+                        </div>
+                        <div class="cont">
+                          <span class="a1">Chicago,</span><span class="a2">Cubs</span>
+                        </div>
+                      </div>
+                      <div class="content">
+                        <div class="cont-img">
+                          <img src="assets/images/face7.jpg">
+                        </div>
+                        <div class="cont">
+                          <span class="a1">Boston,</span><span class="a2">Red Sox</span>
+                        </div>
+                      </div>
+                      <div class="content">
+                        <div class="cont-img">
+                          <img src="assets/images/face7.jpg">
+                        </div>
+                        <div class="cont">
+                          <span class="a1">Boston,</span><span class="a2">Red Sox</span>
+                        </div>
+                      </div>
+                    </div>   -->
+
+                    
+          <!-- <div class="clearfix"></div>
+          <div class="content">
+              <img src="assets/images/face7.jpg">
+  
+              <div class="cont">
+                <span class="a1">Atlanta,</span><span class="a2">Braves</span>
+              </div>
+          </div>
+          <div class="clearfix"></div>
+          <div class="content">
+                <img src="assets/images/face7.jpg">
+    
+                <div class="cont">
+                  <span class="a1">Atlanta,</span><span class="a2">Braves</span>
+                </div>
+          </div>   
+              <div class="clearfix"></div>  
+              <div class="content">
+                  <img src="assets/images/face7.jpg">
+      
+                  <div class="cont">
+                    <span class="a1">Atlanta,</span><span class="a2">Braves</span>
+                  </div>
+              </div>  
+                <div class="clearfix"></div>  
+                <div class="content">
+                    <img src="assets/images/face7.jpg">
+        
+                    <div class="cont">
+                      <span class="a1">Atlanta,</span><span class="a2">Braves</span>
+                    </div>
+                </div>       
+                <div class="clearfix"></div>  
+                <div class="content">
+                    <img src="assets/images/face7.jpg">
+        
+                    <div class="cont">
+                      <span class="a1">Atlanta,</span><span class="a2">Braves</span>
+                    </div>
+                </div>             -->
+              </div>
+        </mat-card-content>
+        <!-- <hr>
+        <mat-card-actions>
+          <div fxLayout="row" layout-align="start center">
+            <mat-input-container class="mr-1 ml-1" fxFlex>
+              <input matInput placeholder="Send message">
+            </mat-input-container>
+            <button mat-fab>
+              <mat-icon>send</mat-icon>
+            </button>
+          </div>
+        </mat-card-actions> -->
+      </mat-sidenav-container>
+    </mat-card>
+  </div>
+</div>
