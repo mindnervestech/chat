@@ -25,14 +25,14 @@ body{
     color: #0093e8;
 }
 
-.mat-toolbar.mat-primary {
-     background: transparent;
+.mat-toolbar .mat-primary {
+    
     color: white;
     margin-top: -43px;
 }
-.mat-sidenav{
-  overflow: unset !important;;
-}
+// .mat-sidenav{
+//   overflow: unset !important;;
+// }
 .app-inner {
   height: 100% !important;
 }
@@ -40,31 +40,21 @@ body{
     background-color: #009688 !important;
     color: #fafafa !important;
 }
-.left-box{
-  width: 30%;
-  position: fixed;
-  background: #000;
-  padding: 17px 0;
-  
-}
+
 .left-box img{
   float: left;
   height: 32px;
   width: 32px;
   padding: 14px 21px;
 }
-.left-box .box-1{
-  width: 34%;
-    float: left;
-    color: #fff;
-}
+
 .left-box .box1{
   font-weight: bold;
   font-size: 26px;
 }
-.mat-nav-list .mat-list-item{
-  display: unset !important;
-}
+// .mat-nav-list .mat-list-item{
+//   display: unset !important;
+// }
 .nav-list-box .mat-list-item-content {
  
   padding: 0 0px !important;
@@ -72,16 +62,7 @@ body{
   height: 85px !important;
 
 }
-.left-box .team-member{
-  color: #fff;
-  width: 22%;
-  float: left;
-  padding: 4px 8px;
-  background: #0093e8;
-  position: relative;
-    top: 16px;
-    right: -10px;
-}
+
 .content{
   display: inline-block;
   width: 98%;
@@ -130,7 +111,7 @@ body .mat-card .mat-card-content {
   height: 554px;
 }
 .mat-toolbar{
-  background: #fff;
+  background: #fff !important;
   box-shadow: 1px 3px 0px #f2f2f2;
 }
 .mat-nav-list {
